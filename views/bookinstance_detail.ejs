@@ -25,4 +25,15 @@
   <strong>Due back:</strong>
   <%= bookinstance.due_back_formatted %>
 </p>
-<% } %> <%- include('footer') %>
+<% } %>
+
+<hr />
+<p>
+  <a href="<%= bookinstance.url + '/delete' %>">Delete Copy</a>
+</p>
+
+<p>
+  <a href="<%= bookinstance.url+'/update' %>">Edit Copy</a>
+</p>
+
+<%- include('footer') %>

@@ -34,7 +34,7 @@
       id="date_of_birth"
       class="form-control"
       name="date_of_birth"
-      value="<%= locals.author === undefined ? '' : author.date_of_birth %>"
+      value="<%= locals.author === undefined ? '' : author.date_of_birth_yyyy_mm_dd %>"
     />
   </div>
   <div class="form-group">
@@ -44,7 +44,7 @@
       id="date_of_death"
       class="form-control"
       name="date_of_death"
-      value="<%= locals.author === undefined ? '' : author.date_of_death %>"
+      value="<%= locals.author === undefined ? '' : author.date_of_death_yyyy_mm_dd %>"
     />
   </div>
   <button class="btn btn-primary" type="submit">Submit</button>

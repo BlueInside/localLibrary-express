@@ -1,0 +1,19 @@
+<%- include('header') %>
+
+<h1><%= title %></h1>
+
+<p>Do you really want to delete this copy:</p> <span> <%= bookinstance._id %></span>
+
+<form method="POST">
+  <div class="form-group">
+    <input
+      type="hidden"
+      name="bookinstanceid"
+      id="bookinstanceid"
+      value="<%= bookinstance._id %>"
+    />
+  </div>
+  <button class="btn btn-primary">Delete</button>
+</form>
+
+<%- include('footer') %>
