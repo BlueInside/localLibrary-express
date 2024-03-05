@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const compression = require('compression');
 const helmet = require('helmet');
+require('dotenv').config();
 // Routes
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -22,7 +23,7 @@ const limiter = RateLimit({
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
 
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
+const mongoDB = process.env.MONGODB_URI;
 
 main().catch((err) => console.log(err));
 async function main() {
